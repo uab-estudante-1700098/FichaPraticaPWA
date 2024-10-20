@@ -9,5 +9,115 @@
         />
     </head>
 
-    <body></body>
+    <body>
+        <h1><i>Git</i></h1>
+        <ol>
+            <li>
+                <h2>
+                    O que são operações de <i>Commit</i>, <i>Push</i> e
+                    <i>Pop</i> efetuadas num repositório?
+                </h2>
+                <ul>
+                    <li>
+                        <p>
+                            <strong><i>Commit</i></strong> grava alterações no
+                            repositório.
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            <strong><i>Push</i></strong> atualiza as
+                            <i>refs</i> remotas a partir das <i>refs</i> locais,
+                            enviando, se necessário, os objectos que as
+                            completam.
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            <strong><i>Pop</i></strong> opera sobre a
+                            <i>stash</i>, aplicando o último estado da
+                            <i>stash</i> ao repositório, eliminando depois tal
+                            estado da <i>stash</i> se a operação tiver sucesso.
+                        </p>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <h2>
+                    Quais são as vantagens de usar <i>Branches</i> num
+                    repositório <i>git</i>?
+                </h2>
+                <p>
+                    As vantagens das <strong><i>branches</i></strong> são
+                    várias, permitem por exemplo: desenvolvimento em paralelo,
+                    experimentação, versionamento, entre outras.
+                </p>
+            </li>
+            <li>
+                <h2>
+                    Nos <i>Merges</i> de conteúdos resultantes de um
+                    <i>Pop</i> podem resultar em conflitos. Em que consistem e
+                    como podem ser resolvidos esses conflitos?
+                </h2>
+                <p>
+                    Um conflito de um <strong><i>Pop</i></strong> significa que
+                    existe algo no último estado da <i>stash</i> que, quando
+                    aplicado sobre o estado atual do repositório, está a
+                    competir com outra modificação já realizada (modificação de
+                    uma mesma linha, por exemplo), fazendo com que o
+                    <i>git</i> não saiba qual o estado a ser mantido.
+                </p>
+                <p>
+                    A resolução do conflito poderá ser feita indicado ao
+                    <i>git</i> qual o estado a manter.
+                </p>
+                <p>
+                    Como, em caso de conflito, são adicionados marcadores nos
+                    ficheiros onde tal acontece (<<<<<<< ======= >>>>>>>),
+                    indicando o novo estado e o estado anterior, podemos editar
+                    tais ficheiros, escolhendo o que queremos manter ou remover.
+                    Depois basta adicioná-los - <i>add</i>. E como o
+                    <strong><i>Pop</i></strong> teve conflitos, o último estado
+                    da <i>stash</i> não foi removido, por isso deve-se
+                    removê-lo, se desejado, com <i>stash drop</i>.
+                </p>
+            </li>
+            <li>
+                <h2>
+                    <i>Clone</i> e <i>Fork</i> são formas diferentes de replicar
+                    um repositório <i>Git</i>. Quais as diferenças entre eles?
+                </h2>
+                <p>
+                    As diferenças são sobretudo referentes ao intuito final da
+                    replicação.
+                </p>
+                <ul>
+                    <li>
+                        <p>
+                            <strong><i>Clone</i></strong> é um comando
+                            <i>git</i> que deve ser usado quando se quer ter uma
+                            cópia que pode ser alterada e sincronizada com uma
+                            origem.
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            <strong><i>Fork</i></strong> deve ser usado quando
+                            se quer trabalhar em certa base de código de forma
+                            independente, para criar uma derivação que resulte,
+                            por exemplo, num novo software ou numa sugestão.
+                            <strong><i>Fork</i></strong> não é um comando. Criar
+                            um <strong><i>Fork</i></strong> implica criar um
+                            novo repositório e copiar o conteúdo de outro
+                            repositório para dentro deste, sem manter qualquer
+                            relação com a sua origem inicial. É, por norma, uma
+                            operação de replicação disponível em plataformas de
+                            colaboração como o <i>GitHub</i>, <i>GitLab</i>,
+                            entre outras.
+                        </p>
+                    </li>
+                </ul>
+            </li>
+        </ol>
+    </body>
 </html>
