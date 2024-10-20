@@ -5,4 +5,6 @@
 As vantagens das branches são várias, permitem por exemplo: desenvolvimento em paralelo, experimentação, versionamento, entre outras.
 
 3 – Nos Merges de conteúdos resultantes de um “Pop” podem resultar em conflitos. Em que consistem e como podem ser resolvidos esses conflitos?
+Um conflito de um "Pop" significa que existe algo no último estado da "stash" que, quando aplicado sobre o estado atual do repositório, está a competir com outra modificação já realizada (modificação de uma mesma linha, por exemplo), fazendo com que o git não saiba qual o estado a ser mantido. A resolução do conflito poderá ser feita indicado ao git qual o estado a manter. Como, em caso de conflito, são adicionados marcadores nos ficheiros onde tal acontece (<<<<<<< ======= >>>>>>>), indicando o novo estado e o estado anterior, podemos editar tais ficheiros, escolhendo o que queremos manter ou remover. Depois basta adicioná-los - "add". E como o "Pop" teve conflitos, o último estado da "stash" não foi removido, por isso deve-se removê-lo, se desejado, com o "stash drop".
+
 4 – “Clone” e “Fork” são formas diferentes de replicar um repositório Git. Quais as diferenças entre eles?
